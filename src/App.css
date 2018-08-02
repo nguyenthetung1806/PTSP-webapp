@@ -1,0 +1,56 @@
+.box {
+  align-items: center;
+  width: 300px;
+  height: 100%;
+  margin-top: 100px;
+}
+.App {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.btn {
+  color: #fff;
+  height: 36px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #4e8360;
+  border-color: #3f7e56;
+}
+.btn:hover {
+  opacity: 0.8;
+  background-color: #4e8360;
+  border-color: #3f7e56;
+  cursor: pointer;
+}
+.description {
+  margin-bottom: 20px;
+}
+
+.btn:active {
+  opacity: 0.9;
+  background-color: #4e8360;
+  border-color: #3f7e56;
+  cursor: pointer;
+}
+.custom-file {
+  margin-bottom: 2px;
+}
+.loading {
+  height: 100%;
+  position: relative
+}
+.btn.btn-sm.btn-block.btn-loading {
+  background-color:  #fff;
+  border-color:  #fff;
+}
+.logo_vcbs {
+  width: 300px;
+}
+.text-center {
+  margin-bottom: 10px;
+  color: #3f7e56
+}
+.text-center.no-data {
+  color: #495545
+}
