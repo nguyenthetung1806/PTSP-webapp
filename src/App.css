@@ -1,28 +1,157 @@
-.App {
-  text-align: center;
+div.body {
+  zoom: 1;
+  height:100vh;
+  background-color: #efcbe4;
+  font-size: 12px;
+  opacity: 30%;
+}
+.loading {
+  height: 100%;
+
+  position: relative
+}
+div.warning {
+  height: 20px;
+  color: red;
+}
+.btn.btn-sm.btn-block.btn-loading {
+   background-color:  #fff;
+   border-color:  #fff;
+}
+.anchor {
+  color: #d88cb8;
+  font-weight: bold;
+}
+.anchor:hover {
+  text-decoration: none;
+  color: #d88cb8;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.stack {
+  position: absolute;
+
+}
+.rounded-circle {
+  background-color: #f3e3f4;
+  width: 100px;
+  height:100px;
+  margin: 0;
+  padding: 0;
+}
+#none{
+  position: absolute;
+  display: none;
+}
+.rounded-circle.input:hover {
+  cursor: pointer;
+}
+.pre-ava{
+  width: 80px;
+  height:80px;
+}
+.rounded-circle > * {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+span.logo {
+  color: #e088bb;
+  margin-top: 11px;
+  font-size: 27px;
+  font-weight: bold;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.instruction-helper {
+  color: #93858f;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+.waiting-helper {
+  color: #e088bb;
+  font-size: 20px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  width: 300px;
+}
+.card-header {
+
+}
+.card-body {
+  padding-bottom: 9px;
+}
+.card-footer {
+  font-size: 12px;
+}
+.form-check {
+  margin-top: 7px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.form-control {
+  background-color: #f5f8fa;
+  border-radius: 21px;
+  border: 1px solid #e6ecf0;
+  font-size: 14px;
+  height: 36px;
+  line-height: 16px;
+  padding: 8px 32px 8px 12px;
+  transition: all .2s ease-in-out;
+  width: 100%;
+}
+.form-control:focus {
+  outline: none;
+  border: 2px solid #1DA1F2;
+  box-shadow: none;
+  background: #fff;
+}
+.btn {
+  color: #fff;
+  height: 36px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: #e088bb;
+  border-color: #e2c9d9;
+}
+.btn:hover {
+  opacity: 0.8;
+  background-color: #e088bb;
+  border-color: #e088bb;
+  cursor: pointer;
 }
 
-.App-title {
-  font-size: 1.5em;
+.btn:active {
+  opacity: 0.9;
+  background-color: #e088bb;
+  border-color: #e088bb;
+  cursor: pointer;
 }
-
-.App-intro {
-  font-size: large;
+#signOut-btn {
+  background-color: #afa5ac;
+  border-color: #e2d9e0;
 }
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.important {
+  background-color: #f4e6f2;
+}
+.form-check-label {
+  display: flex;
+  align-items: center;
+}
+#ignore-btn {
+  background-color: #abbfdd;
+  border-color: #abbfdd;
 }
