@@ -1,3 +1,3 @@
 export default {
-  rootPath: "http://localhost:5000" 
+  rootPath: "http://localhost:5000"
 };

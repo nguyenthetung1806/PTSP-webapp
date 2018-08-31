@@ -7,18 +7,24 @@ import logo_vcbs from '../images/vcbs-la-gi.jpg'
 class Index extends Component {
   state = {
   }
-  InputData = event => {
+  InputData_CF0079 = event => {
     event.preventDefault();
-    let file = event.target.files[0];
-    this.setState({ data: file })
-    console.log(file)
+    let fileCF0079 = event.target.files[0];
+    this.setState({ data_CF0079: fileCF0079 })
+    console.log(fileCF0079)
   }
-
+  InputData_OD0024 = event => {
+    event.preventDefault();
+    let fileOD0024 = event.target.files[0];
+    this.setState({ data_OD0024: fileOD0024 })
+    console.log(fileOD0024)
+  }
   SendFile = event => {
     event.preventDefault();
     this.setState({ fetch: true }, function () {
       var formData = new FormData();
-      formData.append("data", this.state.data);
+      formData.append("CF0079", this.state.data_CF0079);
+      formData.append("OD0024", this.state.data_OD0024);
       axios.post("https://ptsp-backend-fifo.herokuapp.com/api/fifo", formData, { responseType: 'arraybuffer' }, { headers: { 'Content-Type': 'multipart/form-data' } })
         .then(response => {
           console.log(response.data);
@@ -39,14 +45,24 @@ class Index extends Component {
           <div>
             <img className="logo_vcbs" src={logo_vcbs} alt='logo' />
           </div>
-          <h3 className="description text-center font-text-bold" >Tính toán FIFO</h3>
+          <h3 className="description text-center font-text-bold" >Báo cáo Môi giới</h3>
           <label className="custom-file">
-            <input onChange={this.InputData} type="file" className="custom-file-input" id="customFile" />
-            <label className="custom-file-label">Choose file</label>
+            <input onChange={this.InputData_CF0079} type="file" className="custom-file-input" id="customFile" />
+            <label className="custom-file-label">Choose file (CF0079)</label>
           </label>
-          {(this.state.data)
+          {(this.state.data_CF0079)
             ? <div className="text-center" >
-              File: {this.state.data.name}
+              File: {this.state.data_CF0079.name}
+            </div>
+            : <div className="text-center no-data">Chưa có Data</div>
+          }
+          <label className="custom-file">
+            <input onChange={this.InputData_OD0024} type="file" className="custom-file-input" id="customFile" />
+            <label className="custom-file-label">Choose file (OD0024)</label>
+          </label>
+          {(this.state.data_OD0024)
+            ? <div className="text-center" >
+              File: {this.state.data_OD0024.name}
             </div>
             : <div className="text-center no-data">Chưa có Data</div>
           }
