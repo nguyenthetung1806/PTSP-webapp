@@ -25,7 +25,7 @@ class Index extends Component {
       var formData = new FormData();
       formData.append("CF0079", this.state.data_CF0079);
       formData.append("OD0024", this.state.data_OD0024);
-      axios.post("http://127.0.0.1:5000/api/CF44", formData, { responseType: 'arraybuffer' }, { headers: { 'Content-Type': 'multipart/form-data' } })
+      axios.post("https://ptsp-backend-fifo.herokuapp.com/api/CF44", formData, { responseType: 'arraybuffer' }, { headers: { 'Content-Type': 'multipart/form-data' } })
         .then(response => {
           console.log(response.data);
           fileDownload(response.data, 'FIFO-Result.xlsx');
